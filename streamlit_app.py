@@ -3,6 +3,9 @@ import pickle
 import time
 import streamlit as st
 
+!pip install lightgbm
+import lightgbm
+
 
 # loading the saved model
 loaded_model = pickle.load(open('final_model.sav', 'rb'))
