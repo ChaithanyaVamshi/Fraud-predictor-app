@@ -3,8 +3,6 @@ import pickle
 import time
 import streamlit as st
 
-#pip install lightgbm
-from lightgbm import LGBMClassifier
 
 
 # loading the saved model
