@@ -4,7 +4,7 @@ import time
 import streamlit as st
 
 #pip install lightgbm
-import lightgbm
+from lightgbm import LGBMClassifier
 
 
 # loading the saved model
