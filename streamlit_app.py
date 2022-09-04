@@ -3,7 +3,7 @@ import pickle
 import time
 import streamlit as st
 
-pip install lightgbm
+#pip install lightgbm
 import lightgbm
 
 
