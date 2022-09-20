@@ -4,9 +4,8 @@ import time
 import streamlit as st
 
 
-
 # loading the saved model
-loaded_model = pickle.load(open('final_model.sav', 'rb'))
+loaded_model = pickle.load(open('/content/final_model.sav', 'rb'))
 
 
 
@@ -34,26 +33,26 @@ def main():
   st.markdown(html_temp, unsafe_allow_html=True)
  
   from PIL import Image
-  image = Image.open('home_banner.PNG')
+  image = Image.open('/content/home_banner.PNG')
 
   st.image(image, caption='Impacting the World of Finance and Banking with Artificial Intelligence (AI)')
 
   # getting the input data from the user
-  st.sidebar.title("Financial Transaction Fraud Prediction System 🚀")
+  st.sidebar.title("Financial Transaction Fraud Prediction System 🕵️")
   st.sidebar.subheader("Choose the Below Parameters to Predict a Financial Transaction")
 
   #TransactionAmt
   st.sidebar.markdown("### Transaction Amount")
-  TransactionAmt = st.sidebar.slider("Choose the Transaction Amount in USD",0,20000,step =1)
+  TransactionAmt = st.sidebar.number_input("Choose the Transaction Amount in USD",0,20000,step =1)
  
   
   #card1 
   st.sidebar.markdown("### Payment Card 1")
-  card1 = st.sidebar.slider("Choose the Payment Card 1 Amount (USD)",0,20000,step = 1)
+  card1 = st.sidebar.number_input("Choose the Payment Card 1 Amount (USD)",0,20000,step = 1)
 
   #card2 
   st.sidebar.markdown("### Payment Card 2")
-  card2 = st.sidebar.slider("Choose the Payment Card 2 Amount (USD)",0,20000,step = 1)
+  card2 = st.sidebar.number_input("Choose the Payment Card 2 Amount (USD)",0,20000,step = 1)
 
   #card4
   st.sidebar.markdown("### Payment Card Category")
@@ -107,12 +106,14 @@ def main():
     final_output = output * 100
     st.subheader('Probability Score of Financial Transaction is {}% '.format(final_output))
 
-    if final_output > 70.0:
+    if final_output > 75.0:
       st.markdown(danger_html, unsafe_allow_html=True)
       st.error("**OMG! Financial Transaction is Fraud**")
     else:
       st.balloons()
-      time.sleep(3)
+      time.sleep(5)
+      st.balloons()
+      time.sleep(5)
       st.balloons()
       st.markdown(safe_html, unsafe_allow_html=True)
       st.success("**Hurray! Transaction is Legitimate**")
