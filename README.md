@@ -11,7 +11,7 @@
 
 
 <p align="center" width="100%">
-<img alt="GIF" src="https://user-images.githubusercontent.com/31254745/191481955-fe07e71f-645c-4961-9dbd-ab86bea2d124.png" width = '600' height = '350'>
+<img alt="GIF" src="https://user-images.githubusercontent.com/31254745/191481955-fe07e71f-645c-4961-9dbd-ab86bea2d124.png" width = '500' height = '300'>
 </p>
 
 <p align = 'justify'> Streamlit: Creating and sharing stunning, personalised web apps for machine learning and data science 
